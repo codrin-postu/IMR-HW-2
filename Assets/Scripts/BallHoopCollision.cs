@@ -7,6 +7,7 @@ public class BallHoopCollision : MonoBehaviour
 
     public GameObject hoopTrigger;
     public GameObject successParticles;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +34,6 @@ public class BallHoopCollision : MonoBehaviour
     {
         GameObject particle = Instantiate(successParticles, transform.position, Quaternion.identity);
         particle.GetComponent<ParticleSystem>().Play();
+        audioSource.Play();
     }
 }
